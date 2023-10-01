@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Home.dart';
+import 'package:try_project/dashboard.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key? key}) : super(key: key);
@@ -59,7 +59,7 @@ class Welcome extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) =>  Departments()));
+                            MaterialPageRoute(builder: (_) =>  Dashboard()));
                       },
                       child: Container(
                         height: 50,
