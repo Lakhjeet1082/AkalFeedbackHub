@@ -97,7 +97,7 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
 
     'Ms. Parul Priya (English)',
 
-    'Dr. Lois Jose (English)',
+    'Dr. Lois Jose (English)',
 
     'Dr. Tajamul Islam (English)',
 
@@ -125,7 +125,7 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
 
     'Dr. Amandeep Sharma (Physics)',
 
-    'Dr. Ramandeep Kaur (Physics)',
+    'Dr. Ramandeep Kaur (Physics)',
 
     'Dr. Janpreet Singh (Physics)',
 
@@ -153,7 +153,7 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
 
     'Mr. Gurnam Singh (Punjabi)',
 
-    'Dr. Somi Ram (Punjabi)',
+    'Dr. Somi Ram (Punjabi)',
 
     'Dr. Tarsem Singh (SGGS)',
 
@@ -259,6 +259,7 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
                   selectedSemester = newValue!;
                 });
               },
+               isExpanded: true,
               items: semesters.map((semester) {
                 return DropdownMenuItem<String>(
                   value: semester,
@@ -278,6 +279,7 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
                   selectedTeacher = newValue!;
                 });
               },
+               isExpanded: true,
               items: teachers.map((teacher) {
                 return DropdownMenuItem<String>(
                   value: teacher,

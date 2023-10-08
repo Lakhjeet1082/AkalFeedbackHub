@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'Home.dart';
+import 'departments.dart';
+import 'notice.dart';
+import 'login.dart';
 // import 'FeedbackFormScreen.dart';
 
 void main() {
@@ -11,6 +13,7 @@ class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       debugShowCheckedModeBanner: false,
       title: 'College Feedback App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -22,7 +25,7 @@ class Dashboard extends StatelessWidget {
 
 class DashboardScreen extends StatelessWidget {
   final List<DashboardItem> items = [
-    DashboardItem('Give Feedback', Icons.feedback, Colors.blue),
+    DashboardItem('Give Feedback', Icons.feedback, Colors.pinkAccent),
     DashboardItem('Suggestions', Icons.lightbulb, Colors.green),
     DashboardItem('Notices', Icons.notifications, Colors.orange),
   ];
@@ -31,7 +34,15 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('College Feedback App'),
+        title: Expanded(child: Text('AkalFeedbackHub', overflow: TextOverflow.ellipsis)),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.login),
+            onPressed: () {
+              Navigator.of(context).push(_createPageRoute());
+            },
+          ),
+        ],
       ),
       body: Container(
         color: Colors.white,
@@ -41,9 +52,9 @@ class DashboardScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'Welcome to the University Feedback App',
+                'Crafting Excellence Through Your Feedback!',
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.blue,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -134,14 +145,27 @@ class DashboardCard extends StatelessWidget {
     //     context,
     //     MaterialPageRoute(builder: (context) => SuggestionsScreen()),
     //   );
-    // } else if (item.title == 'Notices') {
-    //   // Navigate to the Notices screen
-    //   Navigator.push(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => NoticesScreen()),
-    //   );
-    // }
+    // } 
+    else if (item.title == 'Notices') {
+      // Navigate to the Notices screen
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => NoticePage()),
+      );
+    }
     // Add more conditions for other cards/screens if needed
   
 }
 }
+ PageRouteBuilder _createPageRoute() {
+    return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => Login(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        const begin = Offset(1.0, 0.0);
+        const end = Offset.zero;
+        var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: Curves.easeInOut));
+        var offsetAnimation = animation.drive(tween);
+        return SlideTransition(position: offsetAnimation, child: child);
+      },
+    );
+  }
