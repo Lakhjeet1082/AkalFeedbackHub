@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'departments.dart';
 import 'notice.dart';
 import 'login.dart';
+import 'suggestion.dart';
 // import 'FeedbackFormScreen.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class Dashboard extends StatelessWidget {
 
 class DashboardScreen extends StatelessWidget {
   final List<DashboardItem> items = [
-    DashboardItem('Give Feedback', Icons.feedback, Colors.pinkAccent),
+    DashboardItem('Give Feedback', Icons.feedback, Colors.blue),
     DashboardItem('Suggestions', Icons.lightbulb, Colors.green),
     DashboardItem('Notices', Icons.notifications, Colors.orange),
   ];
@@ -34,6 +35,7 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Expanded(child: Text('AkalFeedbackHub', overflow: TextOverflow.ellipsis)),
         actions: [
           IconButton(
@@ -54,7 +56,7 @@ class DashboardScreen extends StatelessWidget {
               Text(
                 'Crafting Excellence Through Your Feedback!',
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.amberAccent,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -139,13 +141,13 @@ class DashboardCard extends StatelessWidget {
         MaterialPageRoute(builder: (context) => Departments()),
       );
     }
-    // else if (item.title == 'Suggestions') {
-    //   // Navigate to the Suggestions screen
-    //   Navigator.push(
-    //     context,
-    //     MaterialPageRoute(builder: (context) => SuggestionsScreen()),
-    //   );
-    // } 
+    else if (item.title == 'Suggestions') {
+      // Navigate to the Suggestions screen
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) =>  SuggestionFormScreen()),
+      );
+    } 
     else if (item.title == 'Notices') {
       // Navigate to the Notices screen
       Navigator.push(
@@ -153,7 +155,7 @@ class DashboardCard extends StatelessWidget {
         MaterialPageRoute(builder: (context) => NoticePage()),
       );
     }
-    // Add more conditions for other cards/screens if needed
+   
   
 }
 }

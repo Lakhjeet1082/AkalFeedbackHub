@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 
 class NoticePage extends StatefulWidget {
+  const NoticePage({super.key});
+
   @override
   _NoticePageState createState() => _NoticePageState();
 }
@@ -10,7 +12,7 @@ class _NoticePageState extends State<NoticePage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   TextEditingController _titleController = TextEditingController();
   TextEditingController _contentController = TextEditingController();
-  List<String> _departments = [
+  final List<String> _departments = [
     'Computer Science (B.tech)',
     'Computer Science (BCA)',
     'Physics',
@@ -83,6 +85,8 @@ class _NoticePageState extends State<NoticePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+      backgroundColor: Colors.black,
+
         title: Text('Upload Notice'),
       ),
       body: Padding(
@@ -156,13 +160,17 @@ class _NoticePageState extends State<NoticePage> {
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text('Cancel'),
+                  
+                  child: Text('Cancel', style: TextStyle(color: Colors.red),),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                     _submitForm(_isSelected.every((element) => element == true));
                   },
+                  style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  ),
                   child: Text('Submit'),
                 ),
               ],
@@ -172,6 +180,9 @@ class _NoticePageState extends State<NoticePage> {
       },
     );
   },
+  style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  ),
   child: Text('Select Department'),
 ),
 
@@ -180,6 +191,7 @@ class _NoticePageState extends State<NoticePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
         onPressed: _getFilesFromGallery,
         child: Icon(Icons.add),
       ),

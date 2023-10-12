@@ -8,6 +8,7 @@ class FeedbackApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
       title: 'Feedback',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -76,6 +77,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
     return Scaffold(
         appBar: AppBar(
           title: Text('Feedback'),
+          backgroundColor: Colors.black,
         ),
         body: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -105,10 +107,16 @@ class _FeedbackFormState extends State<FeedbackForm> {
                 if (currentPageIndex > 0)
                   ElevatedButton(
                     onPressed: previousPage,
+                    style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  ),
                     child: Text('Previous'),
                   ),
                 ElevatedButton(
                   onPressed: nextPage,
+                  style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  ),
                   child: Text(currentPageIndex == questions.length - 1 ? 'Submit' : 'Next'),
                 ),
                 SizedBox(height: 20.0),

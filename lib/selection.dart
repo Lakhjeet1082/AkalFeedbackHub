@@ -240,6 +240,7 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text('Feedback - ${widget.departmentName}'),
       ),
       body: Padding(
@@ -305,6 +306,9 @@ class _FeedbackFormScreenState extends State<FeedbackFormScreen> {
                   MaterialPageRoute(builder: (context) => FeedbackApp()),
                 );
               },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  ),
               child: Text('Next'),
             ),
           ],

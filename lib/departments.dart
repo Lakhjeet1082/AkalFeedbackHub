@@ -30,10 +30,12 @@ class Departments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
       title: 'University Departments',
       home: Scaffold(
         appBar: AppBar(
           title: Text('University Departments'),
+          backgroundColor: Colors.black,
         ),
         body: Center(
           child: GridView.builder(
