@@ -14,6 +14,7 @@ void main() async{
   projectId: "akal-hub-10318",
   storageBucket: "akal-hub-10318.appspot.com",
   messagingSenderId: "895079374528",
+    databaseURL: 'https://akal-hub-10318-default-rtdb.firebaseio.com', 
   appId: "1:895079374528:web:686a4f065e44b945ed9725",
   ));
   }

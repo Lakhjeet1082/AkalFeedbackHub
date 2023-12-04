@@ -1,0 +1,26 @@
+{
+    "Teachers": {
+      "John": {
+        "subjects": {
+          "CS": "Cyber security",
+          "CSE": "toc",
+          "CS": "social media Analytics"
+        }
+      },
+      "Andrew": {
+        "subjects": {
+          "CS": "Mobile app devolpment",
+          "CSE": "Business intelligence",
+          "CSE": "discrete maths"
+        }
+      },
+      "Eliza": {
+        "subjects": {
+          "CSE": "Data Handling",
+          "CS": "Software engineer",
+          "CSE": "Rprogramming"
+        }
+      }
+    }
+  }
+  

@@ -60,7 +60,7 @@ class Welcome extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () {
                         Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) =>  LoginScreen()));
+                            MaterialPageRoute(builder: (_) =>  Dashboard()));
                       },
                       child: Container(
                         height: 50,

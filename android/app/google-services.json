@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "895079374528",
+    "firebase_url": "https://akal-hub-10318-default-rtdb.firebaseio.com",
+    "project_id": "akal-hub-10318",
+    "storage_bucket": "akal-hub-10318.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895079374528:android:8b79f4ee02bcfb16ed9725",
+        "android_client_info": {
+          "package_name": "com.example.try_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3pdD7quESitDrttadDAnITseIIkDeFhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

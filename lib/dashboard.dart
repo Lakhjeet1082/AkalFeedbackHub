@@ -4,6 +4,7 @@ import 'departments.dart';
 import 'notice.dart';
 import 'login.dart';
 import 'suggestion.dart';
+import 'Student_details.dart';
 // import 'FeedbackFormScreen.dart';
 
 void main() {
@@ -138,7 +139,7 @@ class DashboardCard extends StatelessWidget {
       // Navigate to the Give Feedback screen
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Departments()),
+        MaterialPageRoute(builder: (context) => StudentUidScreen()),
       );
     }
     else if (item.title == 'Suggestions') {
